@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        .btnClr {
+            background-color:darksalmon;
+            display: flex;
+            margin: 10px;
+        }
+
+        .btnDark {
+            background-color: aqua;
+            /* display: flex; */
+             /* margin: 10%; */
+        }
+
+    </style>
+
+    <script>
+
+        let changed = false;
+
+        function textUpd(params) {
+
+            changed = !(changed)
+
+            if (changed) {
+               
+                document.getElementById("btnId").src = "https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
+            } else {
+              
+                document.getElementById("btnId").src = "https://cdn.wallpaperhub.app/cloudcache/8/5/a/f/8/1/85af81b0e1294dc7ad82f0ebb0694a2d2d0ed35a.jpg"
+            }
+            console.log("changed boolean ", changed)
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="youtube" id="btnId">
+
+    <button class="btnClr" onclick="textUpd()" >
+        change text
+    </button>
+
+</body>
+</html>
